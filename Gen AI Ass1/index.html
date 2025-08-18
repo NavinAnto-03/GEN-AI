@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navin Chatbot</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, lightblue, lightsteelblue);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #chat-container {
+      width: 420px;
+      background: white;
+      border-radius: 15px;
+      padding: 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      animation: fadeIn 0.5s ease-in-out;
+      overflow: hidden;
+    }
+    /* Header */
+    #chat-header {
+      text-align: center;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      background: whitesmoke;
+      border-bottom: 1px solid lightgray;
+      color: blue;
+    }
+
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 12px;
+      max-height: 420px;
+      padding: 15px;
+      scrollbar-width: thin;
+    }
+    #messages::-webkit-scrollbar {
+      width: 6px;
+    }
+    #messages::-webkit-scrollbar-thumb {
+      background: gray;
+      border-radius: 10px;
+    }
+    .msg {
+      margin: 6px 0;
+      padding: 10px 14px;
+      font-size: 14px;
+      line-height: 1.4;
+      animation: slideUp 0.3s ease;
+    }
+    .user {
+      background: blue;
+      color: white;
+      align-self: flex-end;
+      border-radius: 18px;
+      border-bottom-right-radius: 4px;
+      max-width: 75%;
+    }
+    .bot {
+      background: none;   /* plain text, no box */
+      color: black;
+      align-self: flex-start;
+      padding: 0;
+      border-radius: 0;
+      max-width: 100%;
+    }
+    #input-container {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid lightgray;
+      background: whitesmoke;
+    }
+    #user-input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid lightgray;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+    #user-input:focus {
+      border-color: blue;
+      box-shadow: 0 0 4px skyblue;
+    }
+    #send-btn {
+      margin-left: 10px;
+      padding: 12px 18px;
+      border: none;
+      background: blue;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    #send-btn:hover {
+      background: navy;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container">
+    <!-- Changed Header -->
+    <div id="chat-header">
+      Navin Chatbot
+    </div>
+    <div id="messages"></div>
+    <div id="input-container">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
