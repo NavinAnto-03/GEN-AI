@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyDGmnu3rsg41YTloDkLhCHKvOQ5KXAGQkE"; 
+const API_KEY = "AIzaSyA5wsPoTaqRISGgpTh5n7kMYL8SU0llXIY"; 
 const messagesContainer = document.getElementById("messages");
 const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
