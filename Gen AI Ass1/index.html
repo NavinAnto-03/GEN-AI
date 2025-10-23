@@ -9,7 +9,6 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, lightblue, lightsteelblue);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -26,6 +25,7 @@
       animation: fadeIn 0.5s ease-in-out;
       overflow: hidden;
     }
+    /* Header */
     #chat-header {
       text-align: center;
       padding: 15px;
@@ -67,7 +67,7 @@
       max-width: 75%;
     }
     .bot {
-      background: none;   
+      background: none;   /* plain text, no box */
       color: black;
       align-self: flex-start;
       padding: 0;
@@ -106,23 +106,6 @@
     #send-btn:hover {
       background: navy;
     }
-
-    
-    .btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 20px;
-      background: blue;
-      color: white;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .btn:hover {
-      background: navy;
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
@@ -135,7 +118,7 @@
 </head>
 <body>
   <div id="chat-container">
-    
+    <!-- Changed Header -->
     <div id="chat-header">
       Navin Chatbot
     </div>
@@ -145,11 +128,6 @@
       <button id="send-btn">Send</button>
     </div>
   </div>
-  <a class="btn" href="https://navinanto-03.github.io/GEN-AI/Gen%20AI%20Ass1/index.html" target="_blank">
-  </a>
-
   <script src="script.js"></script>
 </body>
 </html>
-
-
