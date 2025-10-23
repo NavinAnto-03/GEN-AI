@@ -42,3 +42,4 @@ sendBtn.addEventListener("click", sendMessage);
 userInput.addEventListener("keypress", e => {
   if (e.key === "Enter") sendMessage();
 });
+
